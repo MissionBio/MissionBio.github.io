@@ -299,6 +299,11 @@ button {
   width: 31%;
   padding: 0 1em 2em 1em;
   box-sizing:border-box;
+  text-decoration: none;
+}
+
+#integrations .card:hover {
+  box-shadow: 0px 0px 44px #0073FF1A;
 }
 
 #integrations .card img {
@@ -330,6 +335,7 @@ button {
 #testimonials {
   margin-top: 6vh;
   margin-bottom: 6vh;
+  overflow-x: hidden;
 }
 
 #testimonials h4 {
@@ -351,14 +357,78 @@ button {
 }
 
 #testimonials .carousel {
-  width: 100%;
-  overflow-x: hidden;
+  width: 10000px;
 }
 
 #testimonials .carousel .nav {
-  width:33%;
+  width: 30vw;
   display: inline-block;
 }
+
+#testimonials .carousel .buttons {
+  height: 6vh;
+}
+
+#testimonials .carousel .buttons div {
+  display: inline-block;
+}
+
+#testimonials .carousel .item {
+  position: relative;
+  width: 40vw;
+  display: inline-block;
+  border: 1px solid #CCE3FF;
+  border-radius: 8px;
+  margin-right: 2em;
+}
+
+#testimonials .carousel .item.active {
+  background: #F0F9FC 0% 0% no-repeat padding-box;
+  border: 0;
+}
+
+#testimonials .carousel .item .quote_marker {
+  display: none;
+}
+
+#testimonials .carousel .item.active .quote_marker {
+  display: block;
+  position: absolute;
+  top: -5em;
+  left: 1.75em;
+}
+
+#testimonials .carousel blockquote {
+  margin: 0
+}
+
+#testimonials .carousel blockquote p.quote {
+  padding: 7em 3em 1.5em 1.75em;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 1em/var(--unnamed-line-spacing-26) var(--unnamed-font-family-montserrat);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-2e374d);
+}
+
+#testimonials .carousel blockquote .citation {
+  position: absolute;
+  top: 4em;
+  left: 2em;
+}
+
+#testimonials .carousel blockquote .citation .name {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) 1em/var(--unnamed-line-spacing-26) var(--unnamed-font-family-montserrat);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-2e374d);
+  margin: 0;
+}
+
+#testimonials .carousel blockquote .citation .title {
+  font: var(--unnamed-font-style-normal) normal 300 var(--unnamed-font-size-12)/var(--unnamed-line-spacing-64) var(--unnamed-font-family-montserrat);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-2e374d);
+  margin: 0 0 0.5em 0;
+}
+
 
 /*******************************************************************************
 * FAQs
