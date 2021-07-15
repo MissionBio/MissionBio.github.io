@@ -57,7 +57,7 @@ header {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 10%;
+  height: 9vh;
   max-height: 80px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 24px #0073FF1A;
@@ -66,11 +66,12 @@ header {
 
 footer {
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  height: 10vh;
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-12)/var(--unnamed-line-spacing-26) ProximaNova;
+  height: 9vh;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-26) ProximaNova;
   letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-2e374d);
 }
+
+
 
 footer div {
   display: inline-block;;
@@ -78,7 +79,7 @@ footer div {
 }
 
 footer p {
-  line-height: 10vh;
+  line-height: 9vh;
   margin: 0;
 }
 
@@ -86,12 +87,14 @@ footer .center {
   text-align: center;
 }
 
-
-
 footer a {
   text-decoration: none;
-  color: #8797AD;
+  color: #363636;
   margin-right: 2em;
+}
+
+footer a:hover {
+  color: #0073ff;
 }
 
 h2 {
