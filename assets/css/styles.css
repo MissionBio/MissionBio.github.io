@@ -50,8 +50,15 @@ body {
   }
 }
 header, section, footer {
-  padding-left: 3.6%;
-  padding-right: 3.6%;
+  padding-left: 6em;
+  padding-right: 6em;
+}
+
+@media screen and (max-width: 769px) {
+  header, section, footer {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 header {
   position: fixed;
@@ -59,7 +66,7 @@ header {
   width: 100%;
   min-height: 5.25rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  box-shadow: 0px 2px 24px #0073FF1A;
+  box-shadow: 0px 2px 14px #0073FF1A;
   z-index: 100;
   display: flex;
   flex-wrap: nowrap;
@@ -112,18 +119,18 @@ header .pipe {
 footer {
   background: #FFFFFF 0% 0% no-repeat padding-box;
   height: 5.25rem;
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-26) ProximaNova;
-  letter-spacing: var(--unnamed-character-spacing-0);
 }
 
 footer div {
   display: inline-block;;
-  width: 33%;
+  width: 49%;
 }
 
 footer p {
   line-height: 5.25rem;
   margin: 0;
+  color: #363636;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/5.25rem ProximaNova;
 }
 
 footer .center {
@@ -133,7 +140,9 @@ footer .center {
 footer a {
   text-decoration: none;
   color: #363636;
-  margin-right: 2em;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/5.25rem ProximaNova;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  margin-right: 1.7em;
 }
 
 footer a:hover {
@@ -154,6 +163,7 @@ footer a:hover {
   }
   footer a {
     display: block;
+    line-height: 2;
   }
   footer .center {
     text-align: left;
@@ -286,7 +296,7 @@ button {
   box-sizing: border-box;
   display: inline-block;
   margin-top: -30vh;
-  margin-right: 13vh;
+  margin-right: 15vh;
   z-index: -1;
 }
 
@@ -300,6 +310,7 @@ button {
 #tools {
   background: #F8F9FC 0% 0% no-repeat padding-box;
   border-radius: 4px;
+  margin-bottom: 2em;
 }
 
 #tools_options button {
@@ -336,11 +347,15 @@ button {
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 1em/var(--unnamed-line-spacing-26) ProximaNova;
 }
 .tools_list td,  .tools_list  th {
-  padding: 1em 6em 1em 3em;
+  padding: 1em 2em 1em 2em;
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-2e374d);
   text-align: left;
   border-bottom: 1px solid #E6F1FF;
+}
+
+.tools_list .links {
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 769px) {
@@ -414,10 +429,6 @@ button {
 
 #integrations .row {
   margin-bottom: 2em;
-}
-
-#integrations .copy {
-  font-family: ProximaNova;
 }
 
 #integrations .card-link {
