@@ -77,8 +77,10 @@ function setIndicator(carousel) {
 }
 
 function configureCarouselIndicators() {
-  var root = $('.carousel');
-
+  var root = $('.carousel:visible');
+  if (root.length == 0) {
+    return;
+  }
   var items = root.find('.item');
   var qty = items.length;
   var indicators = $(`.indicators[data-for='${root.attr('id')}']`);
@@ -92,7 +94,7 @@ function configureCarouselIndicators() {
   //re-position
   indicators.detach();
   var item = $(items[0]);
-  $('body').append($(indicators));console.log(item.offset(), item.height());
+  $('body').append($(indicators));
   indicators.css({position: 'absolute', top: item.offset().top + item.height()+12, left: item.offset().left});
 }
 

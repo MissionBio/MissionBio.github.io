@@ -38,9 +38,10 @@
 
 body {
   margin: 0;
-  padding-top: 7%;
+  padding-top: 5.25rem;
   position: relative;
   background-color: #F8F9FC;
+  font-family: ProximaNova;
 }
 
 @media screen and (max-width: 769px) {
@@ -54,24 +55,66 @@ header, section, footer {
 }
 header {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
   width: 100%;
-  height: 9vh;
-  max-height: 80px;
+  min-height: 5.25rem;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 2px 24px #0073FF1A;
   z-index: 100;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: stretch;
+  align-content: start;
 }
+
+header:after {
+  display: block;
+  content: "";
+  margin: 7px;
+  flex: 999 999 auto;
+}
+
+header .header-column {
+  flex: 0 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  width: 3.5rem;
+  flex: 1 1 auto;
+}
+
+header .logo-text {
+  font-weight: bold;
+  font-size: 1em;
+  color: #2e374d;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+}
+
+header .pipe {
+  background: #d9e5ff;
+  margin-left: 1.5rem;
+  margin-right: 1.25rem;
+  height: 100%;
+  width: .15rem;
+}
+
 
 footer {
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  height: 9vh;
+  height: 5.25rem;
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-26) ProximaNova;
   letter-spacing: var(--unnamed-character-spacing-0);
 }
-
-
 
 footer div {
   display: inline-block;;
@@ -79,7 +122,7 @@ footer div {
 }
 
 footer p {
-  line-height: 9vh;
+  line-height: 5.25rem;
   margin: 0;
 }
 
@@ -95,6 +138,26 @@ footer a {
 
 footer a:hover {
   color: #0073ff;
+}
+
+@media screen and (max-width: 769px) {
+  footer {
+    padding-top: 1em;
+  }
+  footer div {
+    display: block;
+    width: 100%;
+  }
+  footer p {
+    line-height: 2;
+    margin: 0;
+  }
+  footer a {
+    display: block;
+  }
+  footer .center {
+    text-align: left;
+  }
 }
 
 h2 {
@@ -119,9 +182,15 @@ button {
 .row {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .column {
   flex: 1 1 50%;
+}
+@media screen and (max-width: 769px) {
+  .column {
+    flex: 1 1 100%;
+  }
 }
 .vcenter {
   display: flex;
@@ -185,6 +254,12 @@ button {
 #screenshots {
   margin-bottom: 14vh;
   text-align: right;
+}
+
+@media screen and (max-width: 769px) {
+  #screenshots {
+    margin-bottom: 3vh;
+  }
 }
 
 #protein_container {
@@ -314,6 +389,13 @@ button {
   padding: 0 1em 2em 1em;
   box-sizing:border-box;
   text-decoration: none;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 769px) {
+  #integrations .card {
+    width: 100%;
+  }
 }
 
 #integrations .card:hover {
@@ -327,7 +409,7 @@ button {
 }
 
 #integrations .spacer-card {
-  width: 30%;
+  width: 31%;
 }
 
 #integrations .row {
@@ -544,4 +626,11 @@ button {
 
 #faqs .status-indicators img {
   width: 100%
+}
+
+@media screen and (max-width: 769px) {
+  #faqs .status-indicators {
+    width: 18px;
+    margin-left: 0.5em;
+  }
 }
