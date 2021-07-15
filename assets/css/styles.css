@@ -120,7 +120,7 @@ button {
   vertical-align: top;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .underscore_double {
@@ -336,6 +336,8 @@ button {
   margin-top: 6vh;
   margin-bottom: 6vh;
   overflow-x: hidden;
+  position: relative;
+  display: none;
 }
 
 #testimonials h4 {
@@ -356,6 +358,19 @@ button {
   color: var(--unnamed-color-2e374d);
 }
 
+.indicators div {
+    border-top: 4px solid #D9E5FF;
+    width: 1em;
+    margin-right: 4px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.indicators div.active {
+  width: 2em;
+  border-top: 4px solid #0073FF;
+}
+
 #testimonials .carousel {
   width: 10000px;
 }
@@ -363,6 +378,8 @@ button {
 #testimonials .carousel .nav {
   width: 30vw;
   display: inline-block;
+  background: #FFFFFF;
+  z-index: 1;
 }
 
 #testimonials .carousel .buttons {
@@ -380,6 +397,8 @@ button {
   border: 1px solid #CCE3FF;
   border-radius: 8px;
   margin-right: 2em;
+  z-index: -1;
+  vertical-align: bottom;
 }
 
 #testimonials .carousel .item.active {
