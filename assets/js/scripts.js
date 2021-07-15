@@ -13,6 +13,24 @@ function toggleElement() {
   $('#'+target).removeClass('hidden');
 }
 
+function toggleAllFaqs() {
+  var btn = $(this);
+  var state = btn.data('state');
+  if (state == 'expanded') {
+    $('#faqs dt').each(function(idx, dt) {
+      $(dt).removeClass('active');
+    });
+    btn.data('state', 'collapsed');
+    btn.html('Expand All');
+  } else {
+    $('#faqs dt').each(function(idx, dt) {
+      $(dt).addClass('active');
+    });
+    btn.data('state', 'expanded');
+    btn.html('Collapse All');
+  }
+}
+
 function collapseElement() {
   var dt = $(this);
   dt.hasClass('active') ? dt.removeClass('active') : dt.addClass('active');
@@ -80,6 +98,8 @@ function configureCarouselIndicators() {
 
 $(function() {
   $('.toggle').on('click', toggleElement);
+
+  $('#expand-all-faqs').on('click', toggleAllFaqs);
 
   $('.collapsible dt').on('click', collapseElement);
 

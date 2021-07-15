@@ -38,9 +38,9 @@
 
 body {
   margin: 0;
-  padding-top: 11%;
+  padding-top: 7%;
   position: relative;
-
+  background-color: #F8F9FC;
 }
 
 @media screen and (max-width: 769px) {
@@ -60,22 +60,33 @@ header {
   height: 10%;
   max-height: 80px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  box-shadow: 0px 2px 44px #0073FF1A;
+  box-shadow: 0px 2px 24px #0073FF1A;
   z-index: 100;
 }
 
 footer {
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  height: 10%;
-  display: flex;
+  height: 10vh;
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-12)/var(--unnamed-line-spacing-26) ProximaNova;
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--unnamed-color-2e374d);
 }
 
-footer p {
-  margin-right: 4em;
+footer div {
+  display: inline-block;;
+  width: 33%;
 }
+
+footer p {
+  line-height: 10vh;
+  margin: 0;
+}
+
+footer .center {
+  text-align: center;
+}
+
+
 
 footer a {
   text-decoration: none;
@@ -169,7 +180,7 @@ button {
 }
 
 #screenshots {
-  margin-bottom: 8vh;
+  margin-bottom: 14vh;
   text-align: right;
 }
 
@@ -196,8 +207,8 @@ button {
   padding: 1em;
   box-sizing: border-box;
   display: inline-block;
-  margin-top: -20vh;
-  margin-right: 6vh;
+  margin-top: -30vh;
+  margin-right: 13vh;
   z-index: -1;
 }
 
@@ -240,7 +251,7 @@ button {
 }
 
 .tools_list th {
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-26) var(--unnamed-font-family-montserrat);
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) var(--unnamed-font-size-14)/var(--unnamed-line-spacing-26) ProximaNova;
 }
 
 .tools_list td {
@@ -456,12 +467,22 @@ button {
   background: #F8F9FC 0% 0% no-repeat padding-box;
   border-radius: 4px;
   padding-bottom: 4vh;
-  padding-top: 4vh;
+  margin-top: -4vh;
+}
+
+#faqs button {
+  border: 1px solid #D5DEFF;
+  border-radius: 4px;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/1em ProximaNova;
+  text-align: left;
+  letter-spacing: 0.22px;
+  color: #575E72;
+  padding: 8px 16px 7px 16px;
+  margin-right: 1em;
 }
 
 #faqs dt, #faqs dd {
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 16px/19px var(--unnamed-font-family-montserrat);
-  letter-spacing: var(--unnamed-character-spacing-0);
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 16px/19px ProximaNova;
 }
 
 #faqs dt, #faqs  dd {
@@ -486,7 +507,7 @@ button {
   border-bottom: 0px;
   border-radius: 4px 4px 0 0;
   letter-spacing: 0.26px;
-  color: #0073FF;
+  font-weight: bold;
   margin-bottom: 0;
 }
 

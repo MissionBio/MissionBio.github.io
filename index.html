@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/fonts.css">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=202107150800">
 
   <meta name="description" content="Page description">
   <meta property="og:title" content="Tapestri Developer Tools | Mission Bio">
@@ -38,7 +38,6 @@
     <section id="hero" class="row">
       <div class="column vcenter">
         <div class="content">
-          <h1>Mission Bio Developer Tools</h1>
           <p class="slogan">Source Code For Single Cell DNA</p>
           <div class="underscore_double"> </div>
           <p class="copy">All of the tools developers and development teams need to be productive when writing, deploying, and debugging applications hosted in Mission Bio Cloud.</p>
@@ -65,18 +64,12 @@
         </div>
       </div>
       <div>
-        <div id="tools_options">
-          <button class="toggle active" data-target="pipeline-tools">Tapestri Pipeline</button>
-          <button class="toggle" data-target="designer-tools">Tapestri Designer</button>
-          <button class="toggle" data-target="insights-tools">Tapestri Insights</button>
-        </div>
-
         <table class="tools_list" id="pipeline-tools">
           <thead>
             <tr>
               <th>Name</th>
               <th>Description</th>
-              <th>More Information</th>
+              <th>&nbsp;</th>
             </tr>
           </thead>
           <tbody>
@@ -84,93 +77,23 @@
               <td class="vtop">Tapestri pipeline compression</td>
               <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
               <td>
-                <a href="http://github.com/missionbio/" class="delim">Github</a>
-                <a href="http://github.com/missionbio/">Guide</a>
+                <a href="http://github.com/missionbio/" class="delim">Code</a>
+                <a href="http://github.com/missionbio/">Docs</a>
               </td>
             </tr>
             <tr>
               <td class="vtop">Tapestri pipeline compression</td>
               <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
               <td>
-                <a href="http://github.com/missionbio/" class="delim">Github</a>
-                <a href="http://github.com/missionbio/">Guide</a>
+                <a href="http://github.com/missionbio/" class="delim">Code</a>
+                <a href="http://github.com/missionbio/">Docs</a>
               </td>
             </tr>
             <tr>
               <td class="vtop">Tapestri pipeline compression</td>
               <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
               <td>
-                <a href="http://github.com/missionbio/">Guide</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table class="tools_list hidden" id="designer-tools">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>More Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="vtop">Tapestri designer</td>
-              <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
-              <td>
-                <a href="http://github.com/missionbio/" class="delim">Github</a>
-                <a href="http://github.com/missionbio/">Guide</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="vtop">Tapestri designer</td>
-              <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
-              <td>
-                <a href="http://github.com/missionbio/" class="delim">Github</a>
-                <a href="http://github.com/missionbio/">Guide</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="vtop">Tapestri designer</td>
-              <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
-              <td>
-                <a href="http://github.com/missionbio/">Guide</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <table class="tools_list hidden" id="insights-tools">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>More Information</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="vtop">Tapestri insights</td>
-              <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
-              <td>
-                <a href="http://github.com/missionbio/" class="delim">Github</a>
-                <a href="http://github.com/missionbio/">Guide</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="vtop">Tapestri insights</td>
-              <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
-              <td>
-                <a href="http://github.com/missionbio/" class="delim">Github</a>
-                <a href="http://github.com/missionbio/">Guide</a>
-              </td>
-            </tr>
-            <tr>
-              <td class="vtop">Tapestri insights</td>
-              <td>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</td>
-              <td>
-                <a href="http://github.com/missionbio/">Guide</a>
+                <a href="http://github.com/missionbio/">Code</a>
               </td>
             </tr>
           </tbody>
@@ -276,6 +199,7 @@
     </section>
     <section id="faqs">
       <h2>Frequently Asked Questions</h2>
+      <button id="expand-all-faqs">Expand All</button>
       <dl class="collapsible">
         <dt>
           <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</div>
@@ -326,10 +250,14 @@
     </section>
   </main>
   <footer>
-    <p class="vcenter">© Mission Bio. All rights reserved</p>
-    <p class="vcenter"><a href="https://dl.missionbio.io/docs/mission-bio-terms.pdf">Terms &amp; Conditions</a> <a href="https://dl.missionbio.io/docs/mission-bio-privacy-policy.pdf">Privacy &amp; Cookies Policy</a></p>
+    <div>
+      <p><a href="https://dl.missionbio.io/docs/mission-bio-terms.pdf">Terms &amp; Conditions</a> <a href="https://dl.missionbio.io/docs/mission-bio-privacy-policy.pdf">Privacy &amp; Cookies Policy</a></p>
+    </div>
+    <div class="center">
+      <p>© Mission Bio. All rights reserved</p>
+    </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="/assets/js/scripts.js" type="module"></script>
+  <script src="/assets/js/scripts.js?v=202107150800" type="module"></script>
 </body>
 </html>
