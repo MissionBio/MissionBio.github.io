@@ -252,6 +252,10 @@ button {
   color: #EF3C4D;
 }
 
+#hero .copy {
+  font-size: var(--unnamed-font-size-18);
+}
+
 #hero .slogan {
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-44)/var(--unnamed-line-spacing-26) var(--unnamed-font-family-montserrat);
   letter-spacing: var(--unnamed-character-spacing-0);
@@ -291,7 +295,7 @@ button {
   width: 73.8%;
   background: #151516 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 64px #0000001A;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 1em;
   box-sizing: border-box;
   display: inline-block;
@@ -358,12 +362,6 @@ button {
   white-space: nowrap;
 }
 
-@media screen and (max-width: 769px) {
-  .tools_list td,  .tools_list  th {
-    padding: 1em
-  }
-}
-
 .tools_list thead th {
   border-bottom: 1px solid var(--text-border-color);
 }
@@ -380,6 +378,59 @@ button {
   border-left: 1px solid var(--text-border-color);
   margin-left: 1em;
   margin-right: 1em;
+}
+
+@media screen and (max-width: 769px) {
+
+	/* Force table to not be like tables anymore */
+	.tools_list, .tools_list thead, .tools_list tbody, .tools_list th, .tools_list td, .tools_list tr {
+		display: block;
+    background-color: inherit;
+
+    border-width: 0;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.tools_list thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+  .tools_list tr {
+    background-color: #ffffff;
+    margin-bottom: 1em;
+    border-top: 1px solid #e6f1ff;
+  }
+
+
+	.tools_list td {
+		/* Behave  like a "row" */
+		border: none;
+		position: relative;
+		padding-left: 30%;
+    border-right: 1px solid #E6F1FF;
+    border-left: 1px solid #E6F1FF;
+    border-bottom: 1px solid #E6F1FF;
+	}
+
+	.tools_list td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 6px;
+		width: 65%;
+		padding-right: 10px;
+		white-space: nowrap;
+    font-weight: bold;
+	}
+
+	/*
+	Label the data
+	*/
+	.tools_list td:nth-of-type(1):before { content: "Name"; }
+	.tools_list td:nth-of-type(2):before { content: "Description"; }
+	.tools_list td:nth-of-type(3):before { content: " "; }
 }
 
 /*******************************************************************************
@@ -427,10 +478,6 @@ button {
   width: 31%;
 }
 
-#integrations .row {
-  margin-bottom: 2em;
-}
-
 #integrations .card-link {
   text-align: right;
 }
@@ -440,10 +487,11 @@ button {
 *******************************************************************************/
 
 #testimonials {
-  margin-top: 6vh;
-  margin-bottom: 6vh;
+  padding-bottom: 6vh;
+  margin-bottom: 3vh;
   overflow-x: hidden;
   position: relative;
+  background-color: #fff;
   display: none;
 }
 
@@ -486,15 +534,48 @@ button {
   width: 30vw;
   display: inline-block;
   background: #FFFFFF;
-  z-index: 1;
+  z-index: 10;
 }
 
 #testimonials .carousel .buttons {
-  height: 6vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  align-content: stretch;
 }
 
 #testimonials .carousel .buttons div {
-  display: inline-block;
+  flex: 0 0 auto;
+  width: 2em;
+  height: 2em;
+  margin-right: 1.5em;
+  border-radius: 50%;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+#testimonials .carousel .buttons div svg {
+  width: 100%;
+  height: 100%;
+}
+
+#testimonials .carousel .buttons div.left {
+  background-color: #EBF4FF;
+  color: var(--unnamed-color-2e374d);
+}
+
+#testimonials .carousel .buttons div.right {
+  background-color: #0073FF;
+  color: #fff;
+}
+
+#testimonials .carousel .buttons  img {
+  width: 1em;
+  height: auto;
+  filter: invert(18%) sepia(39%) saturate(513%) hue-rotate(185deg) brightness(93%) contrast(90%);
+  jfilter: invert(100%) sepia(0%) saturate(7416%) hue-rotate(30deg) brightness(117%) contrast(101%);
 }
 
 #testimonials .carousel .item {
@@ -504,7 +585,7 @@ button {
   border: 1px solid #CCE3FF;
   border-radius: 8px;
   margin-right: 2em;
-  z-index: -1;
+  z-index: 5;
   vertical-align: bottom;
 }
 
@@ -555,6 +636,35 @@ button {
   margin: 0 0 0.5em 0;
 }
 
+@media screen and (max-width: 769px) {
+  #testimonials .carousel {
+    width: 100%;
+  }
+
+  #testimonials .carousel .nav {
+    width: 100%;
+    display: block;
+  }
+
+  #testimonials .carousel .buttons, .indicators {
+    display: none;
+  }
+
+  #testimonials .carousel .item {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  #testimonials .carousel .item.active {
+    background: #fff 0% 0% no-repeat padding-box;
+    border: 1px solid #CCE3FF;
+  }
+
+  #testimonials .carousel .item.active .quote_marker {
+    display: none;
+  }
+}
+
 
 /*******************************************************************************
 * FAQs
@@ -563,7 +673,10 @@ button {
   background: #F8F9FC 0% 0% no-repeat padding-box;
   border-radius: 4px;
   padding-bottom: 4vh;
-  margin-top: -4vh;
+}
+
+#faqs h2 {
+  margin: 0;
 }
 
 #faqs button {
