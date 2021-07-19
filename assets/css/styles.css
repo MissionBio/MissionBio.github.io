@@ -42,6 +42,7 @@ body {
   position: relative;
   background-color: #F8F9FC;
   font-family: ProximaNova;
+  color: #575E72;
 }
 
 @media screen and (max-width: 769px) {
@@ -183,10 +184,9 @@ button {
 }
 
 .copy {
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 1em/var(--unnamed-line-spacing-26) var(--unnamed-font-family-montserrat);
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 1em/var(--unnamed-line-spacing-36) var(--unnamed-font-family-montserrat);
   letter-spacing: var(--unnamed-character-spacing-0);
   text-align: left;
-  color: #575E72;
   margin-bottom: 2em;
 }
 .row {
@@ -492,7 +492,7 @@ button {
   overflow-x: hidden;
   position: relative;
   background-color: #fff;
-  display: none;
+  display: block;
 }
 
 #testimonials h4 {
@@ -575,7 +575,6 @@ button {
   width: 1em;
   height: auto;
   filter: invert(18%) sepia(39%) saturate(513%) hue-rotate(185deg) brightness(93%) contrast(90%);
-  jfilter: invert(100%) sepia(0%) saturate(7416%) hue-rotate(30deg) brightness(117%) contrast(101%);
 }
 
 #testimonials .carousel .item {
@@ -745,7 +744,7 @@ button {
 }
 
 #faqs .status-indicators {
-  width: 24px;
+  width: 20px;
 }
 
 #faqs .status-indicators img {
