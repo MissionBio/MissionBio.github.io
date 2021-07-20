@@ -188,6 +188,7 @@ button {
   letter-spacing: var(--unnamed-character-spacing-0);
   text-align: left;
   margin-bottom: 2em;
+  color: #575E72;
 }
 .row {
   display: flex;
@@ -487,12 +488,13 @@ button {
 *******************************************************************************/
 
 #testimonials {
-  padding-bottom: 6vh;
+  padding-bottom: 4em;
+  margin-top: 1em;
   margin-bottom: 3vh;
   overflow-x: hidden;
   position: relative;
   background-color: #fff;
-  display: block;
+  display: none;
 }
 
 #testimonials h4 {

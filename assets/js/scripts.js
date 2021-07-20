@@ -45,7 +45,7 @@ function slideLeft() {
     return;
   }
   var item = $(items.shift());
-  item.animate({'margin-left': '-500px', opacity: '0'}, function() {
+  item.animate({'margin-left': item.width()*-1, opacity: '0%'}, 'slow', 'linear', function() {
     item.addClass('hidden').removeClass('active')
     $(items.shift()).addClass('active');
     setIndicator(parent);
@@ -62,7 +62,7 @@ function slideRight() {
   }
   parent.find('.item.active').removeClass('active');
   var item = $(items.pop());
-  item.removeClass('hidden').animate({'margin-left': '0', opacity: '100%'}, function(){ setIndicator(parent);}).addClass('active');
+  item.removeClass('hidden').animate({'margin-left': '0', opacity: '100%'}, 'slow', 'linear', function(){ setIndicator(parent);}).addClass('active');
 }
 
 function setIndicator(carousel) {
