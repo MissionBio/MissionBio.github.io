@@ -217,6 +217,10 @@ button {
   display: none !important;
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 .underscore_double {
   border-top: 2px solid #FF939D;
   width: 25%;
