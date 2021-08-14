@@ -50,6 +50,16 @@ body {
     font-size: 12px;
   }
 }
+
+a,
+a:link
+a:visited,
+a:hover {
+  color: #0073FF;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 header, section, footer {
   padding-left: 6em;
   padding-right: 6em;
@@ -128,10 +138,10 @@ footer div {
 }
 
 footer p {
-  line-height: 5.25rem;
   margin: 0;
   color: #363636;
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/5.25rem ProximaNova;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 14px ProximaNova;
+  line-height: 84px;
 }
 
 footer .center {
@@ -141,9 +151,10 @@ footer .center {
 footer a {
   text-decoration: none;
   color: #363636;
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-14)/5.25rem ProximaNova;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 14px ProximaNova;
   letter-spacing: var(--unnamed-character-spacing-0);
   margin-right: 1.7em;
+  line-height: 84px;
 }
 
 footer a:hover {
@@ -319,7 +330,7 @@ button {
 #tools {
   background: #F8F9FC 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 #tools_options button {
@@ -372,7 +383,7 @@ button {
 }
 
 .tools_list a {
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) 1em/var(--unnamed-font-size-18) var(--unnamed-font-family-montserrat);
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600) 1em/var(--unnamed-font-size-18) ProximaNova;
   letter-spacing: 0.26px;
   color: #0073FF;
   text-decoration: none;
@@ -444,7 +455,8 @@ button {
 #integrations {
   background: #F8F9FC 0% 0% no-repeat padding-box;
   border-radius: 4px;
-  padding-bottom: 2vh;
+  /*padding-bottom: 2vh;*/
+  margin-bottom: 3rem;
 }
 
 #integrations h3 {
