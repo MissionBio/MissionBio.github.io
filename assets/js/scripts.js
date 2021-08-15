@@ -14,26 +14,39 @@ function toggleElement() {
 }
 
 function toggleAllFaqs() {
-  var btn = $(this);
-  var state = btn.data('state');
-  if (state == 'expanded') {
+  if (faqsCollpasedCount() > 1) {
     $('#faqs dt').each(function(idx, dt) {
       $(dt).removeClass('active');
     });
-    btn.data('state', 'collapsed');
-    btn.html('Expand All');
   } else {
     $('#faqs dt').each(function(idx, dt) {
       $(dt).addClass('active');
     });
-    btn.data('state', 'expanded');
-    btn.html('Collapse All');
   }
+  setToggleAllFaqsText();
 }
 
 function collapseElement() {
   var dt = $(this);
-  dt.hasClass('active') ? dt.removeClass('active') : dt.addClass('active');
+  if (dt.hasClass('active')) {
+    dt.removeClass('active');
+  } else {
+    dt.addClass('active');
+  }
+  setToggleAllFaqsText();
+}
+
+function faqsCollpasedCount() {
+  return $('.collapsible dt.active').length;
+}
+
+function setToggleAllFaqsText() {
+  var btn = $('#expand-all-faqs');
+  if (faqsCollpasedCount() > 1) {
+    btn.html('Collapse All');
+  } else {
+    btn.html('Expand All');
+  }
 }
 
 //sliding left is really just hiding items so that existing move left
@@ -100,14 +113,9 @@ function configureCarouselIndicators() {
 
 $(function() {
   $('.toggle').on('click', toggleElement);
-
   $('#expand-all-faqs').on('click', toggleAllFaqs);
-
   $('.collapsible dt').on('click', collapseElement);
-
   $('.carousel .buttons .left').on('click', slideRight);
-
   $('.carousel .buttons .right').on('click', slideLeft);
-
   configureCarouselIndicators();
 });
