@@ -112,6 +112,50 @@ function configureCarouselIndicators() {
 }
 
 $(function() {
+  // GA Events: place this *before* the actions so the labels will not change
+  var gaAct = 'click';
+  var gaCat = 'CTA';
+  var gaLabel = 'undefined';
+  // Internal analysis tools
+  $('#pipeline-tools a').on('click', function() {
+    gaAct = 'click';
+    gaCat = $(this).parent().prev().prev().text();
+    gaLabel = $(this).text();
+    gtag('event', gaAct, {
+      'event_category': gaCat,
+      'event_label': gaLabel
+    });
+  });
+  // Integrations
+  $('#integrations a').on('click', function() {
+    gaAct = 'click';
+    gaCat = 'Integrations';
+    gaLabel = $(this).text();
+    gtag('event', gaAct, {
+      'event_category': gaCat,
+      'event_label': gaLabel
+    });
+  });
+  // FAQ
+  $('#faqs #expand-all-faqs').on('click', function() {
+    gaAct = 'click';
+    gaCat = 'FAQ';
+    gaLabel = $(this).text();
+  });
+  $('#faqs .collapsible dt').on('click', function() {
+    if($(this).hasClass('active')) {
+      gaAct = 'collapse';
+    } else {
+      gaAct = 'expand';
+    }
+    gaCat = 'FAQ';
+    gaLabel = $(this).find('>div:first-child').text();
+    gtag('event', gaAct, {
+      'event_category': gaCat,
+      'event_label': gaLabel
+    });
+  });
+  
   $('.toggle').on('click', toggleElement);
   $('#expand-all-faqs').on('click', toggleAllFaqs);
   $('.collapsible dt').on('click', collapseElement);
